@@ -1,0 +1,20 @@
+[S2-vlan2]                                                                      
+[S2-vlan2]dis cu                                                                
+#                                                                               
+ version 5.20, Release 2108P01                                                  
+#                                                                               
+ sysname S2                                                                     
+                                           
+link-aggregation load-sharing mode destination-mac source-mac                  
+                                                                         
+interface Bridge-Aggregation1                                                   
+ link-aggregation mode dynamic                                                  
+                                                                              
+interface Ethernet1/0/1                                                         
+ port link-mode bridge                                                          
+ port link-aggregation group 1                                                  
+#                                                                               
+interface Ethernet1/0/2                                                         
+ port link-mode bridge                                                          
+ port link-aggregation group 1                                                  
+#                                                                               
